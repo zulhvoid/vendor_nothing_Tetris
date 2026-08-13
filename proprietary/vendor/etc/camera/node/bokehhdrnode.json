@@ -1,0 +1,40 @@
+{
+  "Node": {
+    "NodeName": "BokehHdrNode",
+    "NodeInstance": 1,
+    "NodeId": 19,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1)
+        "Id": 1,
+        "Value": "com.nothing.node.bokehhdr.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort2",
+        "PortId": 2,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort3",
+        "PortId": 3,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort4",
+        "PortId": 4,
+        "Format": "YUV420NV21"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      }
+    ]
+  }
+}

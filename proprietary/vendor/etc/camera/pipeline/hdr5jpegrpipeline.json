@@ -1,0 +1,679 @@
+{
+  "PipelineName": "hdr5jpegrpipeline",
+  "Nodes": {
+    "Node": [
+      {
+        "NodeName": "B2YNode",
+        "NodeInstance": 0,
+        "NodeId": 8,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.b2y.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "MMFNode",
+        "NodeInstance": 0,
+        "NodeId": 7,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.mmf.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "YUVHDR_NODE",
+        "NodeInstance": 0,
+        "NodeId": 13,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.hdr5node.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "CFRNode",
+        "NodeInstance": 0,
+        "NodeId": 23,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.cfr.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "BeautyNode",
+        "NodeInstance": 0,
+        "NodeId": 22,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.beauty.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "FRTNode",
+        "NodeInstance": 0,
+        "NodeId": 21,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.frt.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "FilterNode",
+        "NodeInstance": 0,
+        "NodeId": 24,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.filter.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "WaterMarkNode",
+        "NodeInstance": 0,
+        "NodeId": 25,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.watermark.so"
+          },
+          {
+            // NodePropertyParallelize(3)
+            "Id": 3,
+            "Value": true
+          }
+        ]
+      },
+      {
+        "NodeName": "Y2YNode",
+        "NodeInstance": 0,
+        "NodeId": 10,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.y2y.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "JpegRNode",
+        "NodeInstance": 0,
+        "NodeId": 30,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.jpegr.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "JpegNode",
+        "NodeInstance": 0,
+        "NodeId": 11,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.jpeg.so"
+          }
+        ]
+      }
+    ]
+  },
+  "PipelineKeys": {
+    "CameraIdMask": [
+      0
+    ],
+    "OperationModeMask": [
+      "StreamConfigModeNormalPhoto",
+      "StreamConfigModeNormal",
+      "StreamConfigModeQCFAMFNR"
+    ],
+    "SceneModeMask": [
+      "YUV_HDR_MODE"
+    ],
+    "OutputFormatMask": [
+      "JpegR"
+    ]
+  },
+  "PortLinks": {
+    "Link": [
+      {
+        // sourceport (0)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (1)
+        "SrcPort": {
+          "PortId": 1,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 1,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (2)
+        "SrcPort": {
+          "PortId": 2,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 2,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (3)
+        "SrcPort": {
+          "PortId": 3,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 3,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (4)
+        "SrcPort": {
+          "PortId": 4,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 4,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (5)
+        "SrcPort": {
+          "PortId": 5,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 5,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // source tunning image (96) --> mmf node
+        "SrcPort": {
+          "PortId": 115,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      // process multi tuning image.
+      {
+        // source tunning image (116) --> mmf node
+        "SrcPort": {
+          "PortId": 116,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 116,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (117) --> mmf node
+        "SrcPort": {
+          "PortId": 117,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 117,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (118) --> mmf node
+        "SrcPort": {
+          "PortId": 118,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 118,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (119) --> mmf node
+        "SrcPort": {
+          "PortId": 119,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 119,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (120) --> mmf node
+        "SrcPort": {
+          "PortId": 120,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 120,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {//Tuning copy
+        "SrcPort": {
+          "PortId": 121,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 0,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "YV12"
+        }
+      },
+      {//Tuning Y2Y
+        "SrcPort": {
+          "PortId": 122,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 0,
+          "NodeName": "Y2YNode",
+          "NodeId": 10,
+          "Format": "YV12"
+        }
+      },
+      {//for EV-
+        "SrcPort": {
+          "PortId": 32,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "B2YNode",
+          "NodeId": 8,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // source tunning image (99) --> B2Y0
+        "SrcPort": {
+          "PortId": 128,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 0,
+          "NodeName": "B2YNode",
+          "NodeId": 8,
+          "Format": "YV12"
+        }
+      },
+      {//for EV- copy
+        "SrcPort": {
+          "PortId": 33,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 1,
+          "NodeName": "B2Y1Node",
+          "NodeId": 8,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // source tunning image (100) --> B2Y1
+        "SrcPort": {
+          "PortId": 129,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 1,
+          "NodeName": "B2Y1Node",
+          "NodeId": 8,
+          "Format": "YV12"
+        }
+      },
+      {//for EV+ YUV
+        "SrcPort": {
+          "PortId": 64,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 2,
+          "NodeInstance": 0,
+          "NodeName": "YUVHDR_NODE",
+          "NodeId": 13,
+          "Format": "YUV420NV21"
+        }
+      },
+      {//MMF->HDR5
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "YUVHDR_NODE",
+          "NodeId": 13,
+          "Format": "YUV420NV21"
+        }
+      },
+      {//B2Y_0 ->HDR5
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "B2YNode",
+          "NodeId": 8
+        },
+        "DstPort": {
+          "PortId": 3,
+          "NodeInstance": 0,
+          "NodeName": "YUVHDR_NODE",
+          "NodeId": 13,
+          "Format": "YUV420NV21"
+        }
+      },
+      {//B2Y_1->HDR5
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 1,
+          "NodeName": "B2YNode",
+          "NodeId": 8
+        },
+        "DstPort": {
+          "PortId": 1,
+          "NodeInstance": 0,
+          "NodeName": "YUVHDR_NODE",
+          "NodeId": 13,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // YUVHDR_NODE --> CFRNode
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "YUVHDR_NODE",
+          "NodeId": 13,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "CFRNode",
+          "NodeId": 23,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // CFRNode --> BeautyNode
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "CFRNode",
+          "NodeId": 23,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "BeautyNode",
+          "NodeId": 22,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // BeautyNode --> FRT
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "BeautyNode",
+          "NodeId": 22,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "FRTNode",
+          "NodeId": 21,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // FRT --> Filter
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "FRTNode",
+          "NodeId": 21,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "FilterNode",
+          "NodeId": 24,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // Filter --> WaterMark
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "FilterNode",
+          "NodeId": 24,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "WaterMarkNode",
+          "NodeId": 25,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // WaterMark --> Y2YNode
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "WaterMarkNode",
+          "NodeId": 25,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "Y2YNode",
+          "NodeId": 10,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // Y2YNode --> JpegNode
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "Y2YNode",
+          "NodeId": 10,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // Y2YNode --> JpegrNode
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "Y2YNode",
+          "NodeId": 10,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 1,
+          "NodeInstance": 0,
+          "NodeName": "JpegRNode",
+          "NodeId": 30,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // JpegNode --> JpegrNode
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "Jpeg"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "JpegRNode",
+          "NodeId": 30,
+          "Format": "Jpeg"
+        }
+      },
+      {
+        // sinkport (1)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "JpegRNode",
+          "NodeId": 30,
+          "Format": "JpegR"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "SinkNode",
+          "NodeId": 1,
+          "Format": "JpegR"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "Node": {
+    "NodeName": "YuvSRNode",
+    "NodeInstance": 0,
+    "NodeId": 14,
+    "NodeProperties": [
+      {
+        "Id": 1,
+        "Value": "com.nothing.node.yuvsr.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort1",
+        "PortId": 1,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort2",
+        "PortId": 2,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort3",
+        "PortId": 3,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort4",
+        "PortId": 4,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort5",
+        "PortId": 5,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort6",
+        "PortId": 6,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort7",
+        "PortId": 7,
+        "Format": "YUV420NV21"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      }
+    ]
+  }
+}

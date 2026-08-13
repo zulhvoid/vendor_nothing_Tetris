@@ -1,0 +1,40 @@
+{
+  "Node": {
+    "NodeName": "MemcpyNode",
+    "NodeInstance": [0, 1, 2, 3, 4, 5, 6, 7],
+    "NodeId": 27,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1)
+        "Id": 1,
+        "Value": "com.nothing.node.memcpy.so"
+      },
+      {
+        // NodePropertyParallelize(3)
+        "Id": 3,
+        "Value": 1
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV12"
+      },
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV12"
+      },
+      {
+        "PortName": "OutputPort1",
+        "PortId": 96,
+        "Format": "YV12"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "Node": {
+    "NodeName": "BokehDepthNode",
+    "NodeInstance": 0,
+    "NodeId": 19,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 1,
+        "Value": "com.nothing.node.bokehhdr.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        // master image
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      },
+      {
+        // slaver image
+        "PortName": "InputPort1",
+        "PortId": 1,
+        "Format": "YUV420NV21"
+      },
+    ],
+    "OutputPort": [
+      {
+        // output depth
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "BlurMap"
+      }
+    ]
+  }
+}

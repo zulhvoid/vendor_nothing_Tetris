@@ -1,0 +1,30 @@
+{
+  "Node": {
+    "NodeName": "FilterNode",
+    "NodeInstance": [0, 1],
+    "NodeId": 24,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1)
+        "Id": 1,
+        "Value": "com.nothing.node.filter.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV12"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV12"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+service vendor.gralloc-v2 /vendor/bin/hw/mt6878/android.hardware.graphics.allocator-V2-service-mediatek.mt6878
+    class hal animation
+    task_profiles ProcessCapacityHigh HighPerformance
+    user system
+    group graphics drmrpc
+    capabilities SYS_NICE
+    onrestart restart surfaceflinger
+    onrestart restart vendor.hwcomposer-3-2
+    onrestart restart camerahalserver

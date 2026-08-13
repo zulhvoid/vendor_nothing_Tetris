@@ -1,0 +1,300 @@
+{
+  "PipelineName": "DarkVisionPipeline",
+  "Nodes": {
+    "Node": [
+      {
+        "NodeName": "DarkVisionNode",
+        "NodeInstance": 0,
+        "NodeId": 17,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.darkvision.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "B2YNode",
+        "NodeInstance": 0,
+        "NodeId": 8,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.b2y.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "WaterMarkNode",
+        "NodeInstance": 0,
+        "NodeId": 25,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.watermark.so"
+          },
+          {
+            // NodePropertyParallelize(3)
+            "Id": 3,
+            "Value": true
+          }
+        ]
+      },
+      {
+        "NodeName": "JpegNode",
+        "NodeInstance": 0,
+        "NodeId": 11,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.jpeg.so"
+          }
+        ]
+      }
+    ]
+  },
+  "PipelineKeys": {
+    "CameraIdMask": [
+      0,
+      2,
+      4
+    ],
+    "OperationModeMask": [
+      "StreamConfigModeNormalPhoto",
+      "StreamConfigModeNormal",
+      "StreamConfigModeQCFAMFNR"
+
+    ],
+    "SceneModeMask": [
+      "DARKVISION_MODE"
+    ]
+  },
+  "PortLinks": {
+    "Link": [
+      {
+        // sourceport (0)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "DarkVisionNode",
+          "NodeId": 17,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 1,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 1,
+          "NodeInstance": 0,
+          "NodeName": "DarkVisionNode",
+          "NodeId": 17,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 2,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 2,
+          "NodeInstance": 0,
+          "NodeName": "DarkVisionNode",
+          "NodeId": 17,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 3,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 3,
+          "NodeInstance": 0,
+          "NodeName": "DarkVisionNode",
+          "NodeId": 17,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 4,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 4,
+          "NodeInstance": 0,
+          "NodeName": "DarkVisionNode",
+          "NodeId": 17,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 5,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 5,
+          "NodeInstance": 0,
+          "NodeName": "DarkVisionNode",
+          "NodeId": 17,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 6,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 6,
+          "NodeInstance": 0,
+          "NodeName": "DarkVisionNode",
+          "NodeId": 17,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        "SrcPort": {
+          "PortId": 7,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 7,
+          "NodeInstance": 0,
+          "NodeName": "DarkVisionNode",
+          "NodeId": 17,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // DarkVision RAW Result --> B2Y (1)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "DarkVisionNode",
+          "NodeId": 17,
+          "Format": "RawPlain16"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "B2YNode",
+          "NodeId": 8,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (96) ---> B2Y for tuning image
+        "SrcPort": {
+          "PortId": 96,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 0,
+          "NodeName": "B2YNode",
+          "NodeId": 8,
+          "Format": "YV12"
+        }
+      },
+      {
+        // B2Y -> WaterMark
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "B2YNode",
+          "NodeId": 8,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "WaterMarkNode",
+          "NodeId": 25,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // WaterMark --> Jpeg
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "WaterMarkNode",
+          "NodeId": 25,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // sourceport (96) ---> B2Y for tuning image
+        "SrcPort": {
+          "PortId": 97,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 0,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "YV12"
+        }
+      },
+      {
+        // sinkport (1)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "Jpeg"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "SinkNode",
+          "NodeId": 1
+        }
+      }
+    ]
+  }
+}

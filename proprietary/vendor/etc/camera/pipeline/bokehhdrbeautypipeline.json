@@ -1,0 +1,870 @@
+{
+  "PipelineName": "BokehHdrBeautyPipeline",
+  "Nodes": {
+    "Node": [
+      {
+        "NodeName": "MMFNode",
+        "NodeInstance": 0,
+        "NodeId": 7,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.mmfnode.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "BokehDepthNode",
+        "NodeInstance": 0,
+        "NodeId": 19,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.bokehhdr.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "BokehHdrNode",
+        "NodeInstance": 1,
+        "NodeId": 19,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.bokehhdr.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "BokehProcessNode",
+        "NodeInstance": 2,
+        "NodeId": 19,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.bokehhdr.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "B2YNode",
+        "NodeInstance": 0,
+        "NodeId": 8,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.b2y.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "B2Y1Node",
+        "NodeInstance": 1,
+        "NodeId": 8,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.b2y.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "BeautyNode",
+        "NodeInstance": 0,
+        "NodeId": 22,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.beauty.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "FilterNode",
+        "NodeInstance": 0,
+        "NodeId": 24,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.filter.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "FilterNode",
+        "NodeInstance": 1,
+        "NodeId": 24,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.filter.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "WaterMarkNode",
+        "NodeInstance": 0,
+        "NodeId": 25,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.watermark.so"
+          },
+          {
+            // NodePropertyParallelize(3)
+            "Id": 3,
+            "Value": true
+          }
+        ]
+      },
+      {
+        "NodeName": "JpegNode",
+        "NodeInstance": 0,
+        "NodeId": 11,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.jpeg.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "JpegNode",
+        "NodeInstance": 1,
+        "NodeId": 11,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.jpeg.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "DepthMapPackageNode",
+        "NodeInstance": 0,
+        "NodeId": 28,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+            "Id": 1,
+            "Value": "com.nothing.node.depthmappackage.so"
+          }
+        ]
+      },
+      {
+        "NodeName": "FRTNode",
+        "NodeInstance": 0,
+        "NodeId": 21,
+        "NodeProperties": [
+          {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.frt.so"
+          }
+        ]
+      }
+    ]
+  },
+  "PipelineKeys": {
+    "CameraIdMask": [
+      3
+    ],
+    "OperationModeMask": [
+      "StreamConfigModeBokeh"
+    ],
+    "SceneModeMask": [
+      "YUVHDR_BEAUTY_MODE",
+      "YUV_HDR_MODE"
+    ]
+  },
+  "PortLinks": {
+    "Link": [
+      {
+        // sourceport (0)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (1)
+        "SrcPort": {
+          "PortId": 1,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 1,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (2)
+        "SrcPort": {
+          "PortId": 2,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 2,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (3)
+        "SrcPort": {
+          "PortId": 3,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 3,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (4)
+        "SrcPort": {
+          "PortId": 4,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 4,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (5)
+        "SrcPort": {
+          "PortId": 5,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 5,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (6)
+        "SrcPort": {
+          "PortId": 6,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 6,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // sourceport (7)
+        "SrcPort": {
+          "PortId": 7,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 7,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "RawPlain16"
+        }
+      },
+      // process multi tuning image.
+      {
+        // source tunning image (115) --> mmf node
+        "SrcPort": {
+          "PortId": 115,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (116) --> mmf node
+        "SrcPort": {
+          "PortId": 116,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 116,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (117) --> mmf node
+        "SrcPort": {
+          "PortId": 117,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 117,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (118) --> mmf node
+        "SrcPort": {
+          "PortId": 118,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 118,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (119) --> mmf node
+        "SrcPort": {
+          "PortId": 119,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 119,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (120) --> mmf node
+        "SrcPort": {
+          "PortId": 120,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 120,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (121) --> mmf node
+        "SrcPort": {
+          "PortId": 121,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 121,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // source tunning image (122) --> mmf node
+        "SrcPort": {
+          "PortId": 122,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 122,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YV12"
+        }
+      },
+      {
+        // MMF --> BokehDepthNode (port 0)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "BokehDepthNode",
+          "NodeId": 19,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // Source(slaver) -> BokehDepthNode (port 1)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "SourceSlaverNode",
+          "NodeId": 2
+        },
+        "DstPort": {
+          "PortId": 1,
+          "NodeInstance": 0,
+          "NodeName": "BokehDepthNode",
+          "NodeId": 19,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // MMF --> BokehHdrNode (port 0)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "MMFNode",
+          "NodeId": 7,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 2,
+          "NodeInstance": 1,
+          "NodeName": "BokehHdrNode",
+          "NodeId": 19,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // source tunning image (128) --> B2Y0
+        "SrcPort": {
+          "PortId": 128,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 0,
+          "NodeName": "B2YNode",
+          "NodeId": 8,
+          "Format": "YV12"
+        }
+      },
+      {
+        // sourceport (32) Ev-
+        "SrcPort": {
+          "PortId": 32,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "B2YNode",
+          "NodeId": 8,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // B2Y0 --> BokehHdr
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "B2YNode",
+          "NodeId": 8,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 3,
+          "NodeInstance": 1,
+          "NodeName": "BokehHdrNode",
+          "NodeId": 19,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // source tunning image (129) --> B2Y1
+        "SrcPort": {
+          "PortId": 129,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 1,
+          "NodeName": "B2Y1Node",
+          "NodeId": 8,
+          "Format": "YV12"
+        }
+      },
+      {
+        // sourceport (33) Ev-
+        "SrcPort": {
+          "PortId": 33,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 1,
+          "NodeName": "B2Y1Node",
+          "NodeId": 8,
+          "Format": "RawPlain16"
+        }
+      },
+      {
+        // B2Y1 --> BokehHdr
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 1,
+          "NodeName": "B2Y1Node",
+          "NodeId": 8,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 4,
+          "NodeInstance": 1,
+          "NodeName": "BokehHdrNode",
+          "NodeId": 19,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // BokehHdr --> Beauty
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 1,
+          "NodeName": "BokehHdr",
+          "NodeId": 19,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "BeautyNode",
+          "NodeId": 22,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // BokehDepthNode --> BokehProcessNode
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "BokehDepthNode",
+          "NodeId": 19,
+          "Format": "BlurMap"
+        },
+        "DstPort": {
+          "PortId": 6,
+          "NodeInstance": 2,
+          "NodeName": "BokehProcessNode",
+          "NodeId": 19,
+          "Format": "BlurMap"
+        }
+      },
+      {
+        // BeautyNode --> BokehProcessNode
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "BeautyNode",
+          "NodeId": 22,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "FRTNode",
+          "NodeId": 21,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // BeautyNode --> BokehProcessNode
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "FRTNode",
+          "NodeId": 21,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 5,
+          "NodeInstance": 2,
+          "NodeName": "BokehProcessNode",
+          "NodeId": 19,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // BokehProcessNode 0 --> Filter
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 2,
+          "NodeName": "BokehProcessNode",
+          "NodeId": 19,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName":"FilterNode",
+          "NodeId": 24,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // Filter -> WaterMark
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "FilterNode",
+          "NodeId": 24,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "WaterMarkNode",
+          "NodeId": 25,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // WaterMark --> Jpeg (instanceId 0)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "WaterMarkNode",
+          "NodeId": 25,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // source tunning image (98) --> Jpeg0 node
+        "SrcPort": {
+          "PortId": 98,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 0,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "YV12"
+        }
+      },
+      {
+        // Jpeg (0) -> Depth
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "Jpeg"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "DepthMapPackageNode",
+          "NodeId": 28,
+          "Format": "Jpeg"
+        }
+      },
+      {
+        // BeautyNode -> Filter1
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "BeautyNode",
+          "NodeId": 22,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "FRTNode",
+          "NodeId": 21,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // BeautyNode -> Filter1
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "FRTNode",
+          "NodeId": 21,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 1,
+          "NodeName": "FilterNode",
+          "NodeId": 24,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // Filter -> Jpeg1
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 1,
+          "NodeName": "FilterNode",
+          "NodeId": 24,
+          "Format": "YUV420NV21"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 1,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "YUV420NV21"
+        }
+      },
+      {
+        // source tunning image (99) --> Jpeg1
+        "SrcPort": {
+          "PortId": 99,
+          "NodeInstance": 0,
+          "NodeName": "SourceNode",
+          "NodeId": 0
+        },
+        "DstPort": {
+          "PortId": 96,
+          "NodeInstance": 1,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "YV12"
+        }
+      },
+      {
+        // Jpeg1 (0) -> Depth
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 1,
+          "NodeName": "JpegNode",
+          "NodeId": 11,
+          "Format": "Jpeg"
+        },
+        "DstPort": {
+          "PortId": 2,
+          "NodeInstance": 0,
+          "NodeName": "DepthMapPackageNode",
+          "NodeId": 28,
+          "Format": "Jpeg"
+        }
+      },
+      {
+        // BokehDepthNode port 0 -> Depth
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "BokehProcessNode",
+          "NodeId": 19,
+          "Format": "BlurMap"
+        },
+        "DstPort": {
+          "PortId": 1,
+          "NodeInstance": 0,
+          "NodeName": "DepthMapPackageNode",
+          "NodeId": 28,
+          "Format": "BlurMap"
+        }
+      },
+      {
+        // Depth --> sinkport (1)
+        "SrcPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "DepthMapPackageNode",
+          "NodeId": 28,
+          "Format": "Jpeg"
+        },
+        "DstPort": {
+          "PortId": 0,
+          "NodeInstance": 0,
+          "NodeName": "SinkNode",
+          "NodeId": 1
+        }
+      }
+    ]
+  }
+}
