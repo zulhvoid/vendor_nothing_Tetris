@@ -1,0 +1,80 @@
+{
+  "Node": {
+    "NodeName": "RawHDRNode",
+    "NodeInstance": 0,
+    "NodeId": 12,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 1,
+        "Value": "com.nothing.node.rawhdr.so"
+      },
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 2,
+        "Value": true
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort1",
+        "PortId": 1,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort2",
+        "PortId": 2,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort3",
+        "PortId": 3,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort4",
+        "PortId": 4,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort5",
+        "PortId": 5,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort6",
+        "PortId": 6,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPortEV-",
+        "PortId": 32,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPortEV-",
+        "PortId": 33,
+        "Format": "RawPlain16"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "OutputGainMapPort1",
+        "PortId": 1,
+        "Format": "Y8"
+      }
+    ]
+  }
+}

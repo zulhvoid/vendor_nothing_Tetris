@@ -1,0 +1,36 @@
+{
+  "Node": {
+    "NodeName": "Y2YNode",
+    "NodeInstance": 0,
+    "NodeId": 10,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 1,
+        "Value": "com.nothing.node.y2y.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      },
+      // port 96 is tuning image  refer to SourcePortType in NtCamCommonType.h
+      {
+        "PortName": "InputPort1",
+        "PortId": 96,
+        "Format": "YV12"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      }
+    ]
+  }
+}

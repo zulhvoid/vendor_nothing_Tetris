@@ -1,0 +1,36 @@
+{
+  "Node": {
+    "NodeName": "B2YNode",
+    "NodeInstance": [0, 1, 2, 3, 4, 5, 6, 7],
+    "NodeId": 8,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 1,
+        "Value": "com.nothing.node.b2y.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "RawPlain16"
+      },
+      // port 96 is tuning image  refer to SourcePortType in NtCamCommonType.h
+      {
+        "PortName": "InputPort96",
+        "PortId": 96,
+        "Format": "YV12"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      }
+    ]
+  }
+}

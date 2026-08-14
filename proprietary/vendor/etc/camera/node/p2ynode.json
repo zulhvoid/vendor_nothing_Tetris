@@ -1,0 +1,30 @@
+{
+  "Node": {
+    "NodeName": "P2YNode",
+    "NodeInstance": 0,
+    "NodeId": 9,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 1,
+        "Value": "com.nothing.node.p2y.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "P010"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "Node": {
+    "NodeName": "FRTNode",
+    "NodeInstance": 0,
+    "NodeId": 21,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1)
+        "Id": 1,
+        "Value": "com.nothing.node.frt.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV12"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV12"
+      }
+    ]
+  }
+}
