@@ -1,0 +1,39 @@
+{
+    "Node":
+    {
+        "NodeName": "WaterMarkNode",
+        "NodeInstance":0,
+        "NodeId": 25,
+        "NodeProperties": [
+        {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.watermark.so"
+        },
+        {
+          // NodePropertyParallelize(3)
+          "Id": 3,
+          "Value": true
+        }
+        ]
+    },
+
+    "Ports":
+    {
+        "InputPort": [
+        {
+            "PortName": "InputPort0",
+            "PortId"  : 0,
+            "Format"  : "YUV420NV12"
+        }
+        ],
+
+        "OutputPort": [
+        {
+            "PortName": "OutputPort0",
+            "PortId"  : 0,
+            "Format"  : "YUV420NV12"
+        }
+        ]
+    }
+}

@@ -1,0 +1,65 @@
+{
+  "Node": {
+    "NodeName": "DarkVisionNode",
+    "NodeInstance": 0,
+    "NodeId": 17,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1)
+        "Id": 1,
+        "Value": "com.nothing.node.darkvision.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort1",
+        "PortId": 1,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort2",
+        "PortId": 2,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort3",
+        "PortId": 3,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort4",
+        "PortId": 4,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort5",
+        "PortId": 5,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort32",
+        "PortId": 6,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort33",
+        "PortId": 7,
+        "Format": "RawPlain16"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "RawPlain16"
+      }
+    ]
+  }
+}

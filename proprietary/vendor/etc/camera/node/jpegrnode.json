@@ -1,0 +1,50 @@
+{
+  "Node": {
+    "NodeName": "JpegRNode",
+    "NodeInstance": 0,
+    "NodeId": 30,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 1,
+        "Value": "com.nothing.node.jpegr.so"
+      },
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 3,
+        "Value": 1
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "Jpeg"
+      },
+      {
+        "PortName": "InputPort1",
+        "PortId": 1,
+        "Format": "P010"
+      },
+      {
+        "PortName": "InputPort2",
+        "PortId": 2,
+        "Format": "YUV420SP"
+      },
+      {
+        "PortName": "InputGainMapPort3",
+        "PortId": 3,
+        "Format": "Y8"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "JpegR"
+      }
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "Node": {
+    "NodeName": "MMFNode",
+    "NodeInstance": 0,
+    "NodeId": 7,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 1,
+        "Value": "com.nothing.node.mmf.so"
+      },
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 2,
+        "Value": true
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort1",
+        "PortId": 1,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort2",
+        "PortId": 2,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort3",
+        "PortId": 3,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort4",
+        "PortId": 4,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort5",
+        "PortId": 5,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort6",
+        "PortId": 6,
+        "Format": "RawPlain16"
+      },
+      {
+        "PortName": "InputPort7",
+        "PortId": 7,
+        "Format": "RawPlain16"
+      },
+      // port 96 is tuning image  refer to SourcePortType in NtCamCommonType.h
+      {
+        "PortName": "InputPort96",
+        "PortId": 96,
+        "Format": "YV12"
+      },
+      {
+        "PortName": "InputPort128",
+        "PortId": 116,
+        "Format": "YV12"
+      },
+      {
+        "PortName": "InputPort129",
+        "PortId": 117,
+        "Format": "YV12"
+      },
+      {
+        "PortName": "InputPort130",
+        "PortId": 118,
+        "Format": "YV12"
+      },
+      {
+        "PortName": "InputPort131",
+        "PortId": 119,
+        "Format": "YV12"
+      },
+      {
+        "PortName": "InputPort132",
+        "PortId": 120,
+        "Format": "YV12"
+      },
+      {
+        "PortName": "InputPort133",
+        "PortId": 121,
+        "Format": "YV12"
+      },
+      {
+        "PortName": "InputPort134",
+        "PortId": 122,
+        "Format": "YV12"
+      },
+      
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      }
+    ]
+  }
+}

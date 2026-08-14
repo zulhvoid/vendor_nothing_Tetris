@@ -1,0 +1,45 @@
+{
+  "Node": {
+    "NodeName": "YUVHDR_NODE",
+    "NodeInstance": 0,
+    "NodeId": 13,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 1,
+        "Value": "com.nothing.node.hdr5node.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort1",
+        "PortId": 1,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort2",
+        "PortId": 2,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort3",
+        "PortId": 3,
+        "Format": "YUV420NV21"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      }
+    ]
+  }
+}

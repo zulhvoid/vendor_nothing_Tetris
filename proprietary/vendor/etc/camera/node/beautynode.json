@@ -1,0 +1,34 @@
+{
+    "Node":
+    {
+        "NodeName": "BeautyNode",
+        "NodeInstance":0,
+        "NodeId": 22,
+        "NodeProperties": [
+        {
+            // NodePropertyCustomLib(1)
+            "Id": 1,
+            "Value": "com.nothing.node.beauty.so"
+        }
+        ]
+    },
+
+    "Ports":
+    {
+        "InputPort": [
+        {
+            "PortName": "InputPort0",
+            "PortId"  : 0,
+            "Format"  : "YUV420NV12"
+        }
+        ],
+
+        "OutputPort": [
+        {
+            "PortName": "OutputPort0",
+            "PortId"  : 0,
+            "Format"  : "YUV420NV12"
+        }
+        ]
+    }
+}

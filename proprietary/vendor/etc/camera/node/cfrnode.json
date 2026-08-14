@@ -1,0 +1,30 @@
+{
+  "Node": {
+    "NodeName": "CFRNode",
+    "NodeInstance": 0,
+    "NodeId": 23,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1)
+        "Id": 1,
+        "Value": "com.nothing.node.cfr.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV12"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV12"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "Node": {
+    "NodeName": "BokehProcessNode",
+    "NodeInstance": 2,
+    "NodeId": 19,
+    "NodeProperties": [
+      {
+        // NodePropertyCustomLib(1) NodePropertyInputVariable(2) NodePropertyParallelize(3)
+        "Id": 1,
+        "Value": "com.nothing.node.bokehhdr.so"
+      }
+    ]
+  },
+  "Ports": {
+    "InputPort": [
+      {
+        "PortName": "InputPort5",
+        "PortId": 5,
+        "Format": "YUV420NV21"
+      },
+      {
+        "PortName": "InputPort6",
+        "PortId": 6,
+        "Format": "BlurMap"
+      }
+    ],
+    "OutputPort": [
+      {
+        "PortName": "OutputPort0",
+        "PortId": 0,
+        "Format": "YUV420NV21"
+      }
+    ]
+  }
+}
