@@ -2579,6 +2579,7 @@ PRODUCT_PACKAGES += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common \
+    mediatek-common \
     CommandService.xml \
     android.hardware.bluetooth-service-mediatek.xml \
     android.hardware.gatekeeper-service.trustonic.xml \
